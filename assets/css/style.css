@@ -2,47 +2,26 @@
 
 
 
-
-.newimage 	{
-	position: relative;
-	float: left;
-	padding: 10px 37px 10px 37px;
-			}
-
-
-
-
 html 		{
-	background-color: #000000;
-	background: url("../images/star-wars.png");
+	background-color: black;
+	background-image: url("../images/star-wars.png");
+	
 	background-repeat: no-repeat;
-	background-size: 100%; 
+	background-size: 100%;
 	
 			}
-
-
-body 		{
-	
-	background-color: black;
-    width: auto;
-	margin: 0 auto; /* Centers whole page dammit */
-	height: 100%;
-	color: #777777;
-	border-width: 0px;
-			} 
 
 
 .container 	{
 	position: relative;   
 	width: auto;
-	background-color: #000000;
+	background-color: transparent;
 	float: none;
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
 	margin: 0 auto;
-			}              
-
+			}       
 
 header 		{
 	
@@ -53,24 +32,42 @@ header 		{
 	text-align: center;
 	font-size: 36px;
 	font-style: italic;
-	background-color: black;
+	background-color: #000000;
 	color: white;
 	border-style: solid;
 	border-width: 2px;
-	border-color: black;
+	border-color: #000000;
 	overflow: auto;
-	font-family: 
+	 
 			}
 
 
 
+body 		{
+	
+	background-color: transparent;
+    width: auto;
+	margin: 0px auto; /* Centers whole page dammit */
+	padding: 0px;
+	height: 100%;
+	color: white;
+	border-width: 0px;
+			} 
 
-.col1 		{
-	background-color: none;
+
+.newimage 	{
 	position: relative;
 	float: left;
-	width: 250px;
-	height: 400px;
+	padding: 10px 37px 10px 37px;
+			}
+       
+
+.row1 		{
+	background-color: transparent;
+	/* position: relative; */
+	/* float: left; */
+	width: auto;
+	height: 250px;
 	border-style: dotted;
 	border-width: 1px;
 	border-color: white;
@@ -78,31 +75,8 @@ header 		{
 			}
 
 
-.col2		{
-	background-color: black;
-	position: relative;
-	float: left;
-	width: 250px;
-	height: 400px;
-	text-align: center;
-	overflow: auto;
-	color: white;
-	font-size: 16px;
-	font-family: arial;
-	border-style: dotted;
-	border-width: 1px;
-	border-color: white;
-			}
-
-
-#guessWrite {
-	color: white;
-	letter-spacing: 5px;
-
-			}
 
 	/* @Media Screen Tags */
-
 
 
 			
