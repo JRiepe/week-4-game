@@ -1,11 +1,9 @@
-/* Header CSS */
 
 
 
 html 		{
 	background-color: black;
 	background-image: url("../images/star-wars.png");
-	
 	background-repeat: no-repeat;
 	background-size: 100%;
 	
@@ -33,58 +31,64 @@ header 		{
 	font-size: 36px;
 	font-style: italic;
 	background-color: #000000;
-	color: white;
+	color: yellow;
 	border-style: solid;
 	border-width: 2px;
 	border-color: #000000;
-	overflow: auto;
-	 
+	overflow: auto;	 
 			}
 
 
 
-body 		{
-	
+body 		{	
 	background-color: transparent;
     width: auto;
 	margin: 0px auto; /* Centers whole page dammit */
 	padding: 0px;
 	height: 100%;
-	color: white;
+	color: yellow;
 	border-width: 0px;
 			} 
 
 
-.newimage 	{
+
+
+
+      
+img 		{
 	position: relative;
 	float: left;
-	padding: 10px 37px 10px 37px;
+	margin: 2px;
+	padding: 0px;
+	border-style: solid;
+	border-width: 3px;
+	border-color: green;
 			}
-       
+
+.yourCharacter 	{
+	border-color: green;
+			}
+
+.yourEnemy 	{
+	border-color: red;
+			}
 
 .row1 		{
 	background-color: transparent;
-	/* position: relative; */
-	/* float: left; */
 	width: auto;
-	height: 250px;
+	height: 100%;
 	border-style: dotted;
 	border-width: 1px;
 	border-color: white;
 	overflow: auto;
 			}
 
-
-
 	/* @Media Screen Tags */
-
-
 			
-@media only screen and (max-width: 600px)
+/* @media only screen and (max-width: 600px)
 
 
 	{	
-
 		.headimage	{
 			position: relative;
 			float: left;
@@ -108,9 +112,7 @@ body 		{
 			width: 300px; 
 					}
 		
-		.secondhead	{
-			width: 248px;
 		}
 		
-	}
+	}*/
 		
