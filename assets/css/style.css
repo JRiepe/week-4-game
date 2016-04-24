@@ -1,0 +1,142 @@
+/* Header CSS */
+
+
+
+
+.newimage 	{
+	position: relative;
+	float: left;
+	padding: 10px 37px 10px 37px;
+			}
+
+
+
+
+html 		{
+	background-color: #000000;
+	background: url("../images/star-wars.png");
+	background-repeat: no-repeat;
+	background-size: 100%; 
+	
+			}
+
+
+body 		{
+	
+	background-color: black;
+    width: auto;
+	margin: 0 auto; /* Centers whole page dammit */
+	height: 100%;
+	color: #777777;
+	border-width: 0px;
+			} 
+
+
+.container 	{
+	position: relative;   
+	width: auto;
+	background-color: #000000;
+	float: none;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto;
+			}              
+
+
+header 		{
+	
+	height: 50px;
+	width: auto;
+	position: static;
+	float: none;
+	text-align: center;
+	font-size: 36px;
+	font-style: italic;
+	background-color: black;
+	color: white;
+	border-style: solid;
+	border-width: 2px;
+	border-color: black;
+	overflow: auto;
+	font-family: 
+			}
+
+
+
+
+.col1 		{
+	background-color: none;
+	position: relative;
+	float: left;
+	width: 250px;
+	height: 400px;
+	border-style: dotted;
+	border-width: 1px;
+	border-color: white;
+	overflow: auto;
+			}
+
+
+.col2		{
+	background-color: black;
+	position: relative;
+	float: left;
+	width: 250px;
+	height: 400px;
+	text-align: center;
+	overflow: auto;
+	color: white;
+	font-size: 16px;
+	font-family: arial;
+	border-style: dotted;
+	border-width: 1px;
+	border-color: white;
+			}
+
+
+#guessWrite {
+	color: white;
+	letter-spacing: 5px;
+
+			}
+
+	/* @Media Screen Tags */
+
+
+
+			
+@media only screen and (max-width: 600px)
+
+
+	{	
+
+		.headimage	{
+			position: relative;
+			float: left;
+			width: 150px;
+			height: 50px;
+			padding: 0px;
+			margin: 0 auto;
+					}
+
+		.container 	{
+			width: 300px;
+					}
+
+		header 		{
+			width: 248px;
+			margin: 0px auto;
+			padding: 0px;
+					}
+
+		body 		{
+			width: 300px; 
+					}
+		
+		.secondhead	{
+			width: 248px;
+		}
+		
+	}
+		
