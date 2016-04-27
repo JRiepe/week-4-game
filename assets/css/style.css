@@ -7,7 +7,7 @@ html 		{
 	background-repeat: no-repeat;
 	background-size: 100%;
 	
-			}
+} /* end html */
 
 
 .container 	{
@@ -19,7 +19,8 @@ html 		{
 	height: auto !important;
 	height: 100%;
 	margin: 0 auto;
-			}       
+
+}	/* end .container */      
 
 header 		{
 	
@@ -36,7 +37,8 @@ header 		{
 	border-width: 2px;
 	border-color: #000000;
 	overflow: auto;	 
-			}
+
+}	/* end header */
 
 
 
@@ -48,38 +50,103 @@ body 		{
 	height: 100%;
 	color: yellow;
 	border-width: 0px;
-			} 
+
+}	/* end body */ 
 
 
+h1			{
+font-family: 'Times new roman', serif;
+font-size: 24px;
+color: yellow;
 
 
+}
 
-      
-img 		{
+
+button	{
+	color: black;
+	background-color: white
+}   
+
+
+.chooseCharacter {
 	position: relative;
 	float: left;
-	margin: 2px;
-	padding: 0px;
+	padding-left: 0px;
+	width: 190px;
+	height: 190px;
+	margin-left: 0px;
+	background-color: white;
 	border-style: solid;
+	border-color: green;
+	color: black;
 	border-width: 3px;
-	border-color: green;
-			}
+	font-size: 15px;
+	overflow: auto;
+	text-align: center;
 
-.yourCharacter 	{
-	border-color: green;
-			}
+}	/* end .chooseCharacter*/
 
-.yourEnemy 	{
+.yourCharacter {
+	position: relative;
+	float: left;
+	padding-left: 0px;
+	width: 190px;
+	height: 190px;
+	margin-left: 0px;
+	background-color: white;
+	border-style: solid;
+	border-color: green;
+	color: black;
+	border-width: 3px;
+	font-size: 15px;
+	overflow: auto;
+	text-align: center;
+
+}	/* end .yourCharacter */
+
+
+
+
+.enemyCharacter 		{
+	width: 190px;
+	height: 190px;
+	margin-left: 20px;
+	background-color: red;
+	border-style: solid;
 	border-color: red;
-			}
+	color: black;
+	border-width: 3px;
+	font-size: 15px;
+	text-align: center;
+	overflow: auto;
+
+} /* end .enemyCharacter */
+
+.defender				{
+	width: 190px;
+	height: 190px;
+	margin-left: 20px;
+	background-color: black;
+	border-style: solid;
+	border-color: green;
+	color: white;
+	border-width: 3px;
+	font-size: 15px;
+	text-align: center;
+	overflow: auto;
+	
+}	/* end .defender */	
+
+
 
 .row1 		{
 	background-color: transparent;
 	width: auto;
 	height: 100%;
-	border-style: dotted;
-	border-width: 1px;
-	border-color: white;
+	border-style: none;
+	border-width: 0px;
+	border-color: transparent;
 	overflow: auto;
 			}
 
