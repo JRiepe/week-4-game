@@ -252,9 +252,33 @@ function yourEnemies()  {
                     obiPower=(obiPower-attackPower);
                     $('#lukePower').html(lukePower);
                     $('#obiPower').html(obiPower);
-                    attackPower=attackPower+8;
+                    $('#attackLine1').html('<p>You suffered '+enemyPower+' damage points</p>');
+                    $('#attackLine2').html('<p>You inflicted '+attackPower+' on Obi-Wan Kenobi');
+                    if (lukePower <= 0 || obiPower <= 0) {
+                        
+                        $('#enemyFighter').replaceWith('');
+                        $('#endGame').html('<button id="resetButton">Reset</button>');
+                        
+                        if (lukePower <=0 && obiPower <= 0){
 
-                    console.log("luke: " + lukePower+" obi: " + obiPower); 
+                            $('#attackLine1').html('<p>You both died valiantly in Battle!</p>');
+                            $('#attackLine2').html('<p>Press the Reset Button to play again!</p>');
+                        }
+                        
+                        if (lukePower <=0) {
+                            $('#attackLine1').html('<p>You died valiantly in Battle!</p>');
+                            $('#attackLine2').html('<p>Press the Reset Button to play again!</p>');
+                        }
+                        
+                        if (obiPower <=0) {
+                            $('#attackLine1').html('<p>You have defeated your opponenet!</p>');
+                            $('#attackLine2').html('<p>Click on another enemy to battle them!</p>');
+                        }
+                    } /* end if (lukePower<=0 || obiPower<=0) */
+
+                    
+                    attackPower=attackPower+8;
+                     
             } /* end if (yourFighter=='luke') && (yourEnemy=='obi-wan') */
             else if (yourFighter=='luke' && yourEnemy=='darth'){
                     lukePower=(lukePower-enemyPower);
@@ -367,7 +391,7 @@ function yourEnemies()  {
             
     }) /* end  click attackButton */            
             
-
+            
 
 
 
