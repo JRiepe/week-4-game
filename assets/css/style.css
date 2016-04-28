@@ -69,7 +69,7 @@ button	{
 }   
 
 
-.chooseCharacter {
+#chooseCharacter {
 	position: relative;
 	float: left;
 	padding-left: 0px;
@@ -87,7 +87,7 @@ button	{
 
 }	/* end .chooseCharacter*/
 
-.yourCharacter {
+#yourCharacter {
 	position: relative;
 	float: left;
 	padding-left: 0px;
@@ -107,9 +107,6 @@ button	{
 
 
 
-
-
-
 #enemy1, #enemy2, #enemy3, #enemy4	{
 	position: relative;
 	float: left;
@@ -119,7 +116,7 @@ button	{
 	margin-left: 0px;
 	background-color: red;
 	border-style: solid;
-	border-color: red;
+	border-color: white;
 	color: black;
 	border-width: 3px;
 	font-size: 15px;
@@ -128,20 +125,26 @@ button	{
 
 } /* end .enemyCharacter */
 
-.defender				{
+
+#enemyFighter {
+	position: relative;
+	float: left;
+	padding-left: 0px;
 	width: 190px;
 	height: 190px;
-	margin-left: 20px;
+	margin-left: 0px;
 	background-color: black;
 	border-style: solid;
 	border-color: green;
 	color: white;
 	border-width: 3px;
 	font-size: 15px;
-	text-align: center;
 	overflow: auto;
-	
-}	/* end .defender */	
+	text-align: center;
+
+}	/* end enemyFighter */
+
+
 
 
 

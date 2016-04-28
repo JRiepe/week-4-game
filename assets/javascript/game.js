@@ -6,9 +6,13 @@ function startGame() {
     // ====================================================================
     // Here we create variables for tracking the number of sandwiches eaten
     var lukePower = 100;
+    var lukeStartValue=8;
     var obiPower = 120;
+    var obiStartValue=12;
     var kyloPower = 150;
+    var kyloStartValue=20;
     var darthPower = 180;
+    var darthStartValue=25;
     var yourFighter;
     var enemy;
     
@@ -31,11 +35,12 @@ function startGame() {
     $("#luke").on("click", function(){
             yourFighter='luke';
             $('#firstChoice').replaceWith('');
-            attackPower=lukePower;
-            $('#yourChar').after('<div class ="yourCharacter"></div>');
-            $('.yourCharacter').append('<div>Luke Skywalker</div>');
-            $('.yourCharacter').append('<img src="assets/images/luke-skywalker.png" width=150px height=150px><br>');
-            $('.yourCharacter').append(attackPower);
+            attackPower=8;
+            $('#yourChar').after('<div id ="yourCharacter"></div>');
+            $('#yourCharacter').append('<div>Luke Skywalker</div>');
+            $('#yourCharacter').append('<img src="assets/images/luke-skywalker.png" width=150px height=150px><br>');
+            $('#yourCharacter').append('<div id="lukePower"></div>');
+            $('#lukePower').html(lukePower);
             yourEnemies();
                               
     }) /* end luke click */
@@ -46,11 +51,12 @@ function startGame() {
     $("#obi-wan").on("click", function(){
             yourFighter='obi-wan';
             $('#firstChoice').replaceWith('');
-            attackPower=obiPower;
-            $('#yourChar').after('<div class ="yourCharacter"></div>');
-            $('.yourCharacter').append('<div>Obi-Wan Kenobi</div>');
-            $('.yourCharacter').append('<img src="assets/images/obi-wan-kenobi.png" width=150px height=150px><br>');
-            $('.yourCharacter').append(attackPower);
+            attackPower=12;
+            $('#yourChar').after('<div id ="yourCharacter"></div>');
+            $('#yourCharacter').append('<div>Obi-Wan Kenobi</div>');
+            $('#yourCharacter').append('<img src="assets/images/obi-wan-kenobi.png" width=150px height=150px><br>');
+            $('#yourCharacter').append('<div id="obiPower"></div>');
+            $('#obiPower').html(obiPower);
             yourEnemies();
     }) /* end obi-wan click */
 
@@ -61,11 +67,12 @@ function startGame() {
     $("#darth").on("click", function(){
             yourFighter='darth';
             $('#firstChoice').replaceWith('');
-            attackPower=darthPower;
-            $('#yourChar').after('<div class ="yourCharacter"></div>');
-            $('.yourCharacter').append('<div>Darth Vader</div>');
-            $('.yourCharacter').append('<img src="assets/images/darth-vader.png" width=150px height=150px><br>');
-            $('.yourCharacter').append(attackPower);
+            attackPower=25;
+            $('#yourChar').after('<div id ="yourCharacter"></div>');
+            $('#yourCharacter').append('<div>Darth Vader</div>');
+            $('#yourCharacter').append('<img src="assets/images/darth-vader.png" width=150px height=150px><br>');
+            $('#yourCharacter').append('<div id="darthPower"></div>');
+            $('#darthPower').html(darthPower);
             yourEnemies();
         
     }) /* end darth click */
@@ -76,23 +83,30 @@ function startGame() {
     $("#kylo").on("click", function(){
             yourFighter='kylo';
             $('#firstChoice').replaceWith('');
-            attackPower=kyloPower;
-            $('#yourChar').after('<div class ="yourCharacter"></div>');
-            $('.yourCharacter').append('<div>Kylo Ren</div>');
-            $('.yourCharacter').append('<img src="assets/images/kylo-ren.png" width=150px height=150px><br>');
-            $('.yourCharacter').append(attackPower);
+            attackPower=20;
+            $('#yourChar').after('<div id ="yourCharacter"></div>');
+            $('#yourCharacter').append('<div>Kylo Ren</div>');
+            $('#yourCharacter').append('<img src="assets/images/kylo-ren.png" width=150px height=150px><br>');
+            $('#yourCharacter').append('<div id="kyloPower"></div>');
+            $('#kyloPower').html(kyloPower);
             yourEnemies();
         
     }) /* end kylo click */
 
 
-/* choose your enemy click events */
+
+
+
+    
+
+
+/* function to add enemies to html */
+
 
 function yourEnemies()  {
-    console.log(yourFighter)
+    
     if (yourFighter=='luke')   {
 
-        
         $('#yourEnemy').append('<div id ="enemy2"></div>');
         $('#enemy2').append('<div>Obi-Wan Kenobi</div>');
         $('#enemy2').append('<img id = "obi-wan2" src="assets/images/obi-wan-kenobi.png" width=150px height=150px><br>');
@@ -173,7 +187,191 @@ function yourEnemies()  {
 
     } /* end  if kylo */
 
+    $("#luke2").on("click", function(){
+            yourEnemy='luke';
+            $('#enemy1').replaceWith('');
+            enemyPower=8;
+            $('#defender').after('<div id ="enemyFighter"></div>');
+            $('#enemyFighter').append('<div>Luke Skywalker</div>');
+            $('#enemyFighter').append('<img src="assets/images/luke-skywalker.png" width=150px height=150px><br>');
+            $('#enemyFighter').append('<div id="lukePower"></div>');
+            $('#lukePower').html(lukePower);
+            attack();
+        
+    }) /* end luke2 (enemy) click */
+
+    $("#obi-wan2").on("click", function(){
+            yourEnemy='obi-wan';
+            $('#enemy2').replaceWith('');
+            enemyPower=12;
+            $('#defender').after('<div id ="enemyFighter"></div>');
+            $('#enemyFighter').append('<div>Obi-Wan Kenobi</div>');
+            $('#enemyFighter').append('<img src="assets/images/obi-wan-kenobi.png" width=150px height=150px><br>');
+            $('#enemyFighter').append('<div id="obiPower"></div>');
+            $('#obiPower').html(obiPower);
+            attack();
+    }) /* end obi-wan2 (enemy) click */
+
+    $("#darth2").on("click", function(){
+            yourEnemy='darth';
+            $('#enemy3').replaceWith('');
+            enemyPower=25;
+            $('#defender').after('<div id ="enemyFighter"></div>');
+            $('#enemyFighter').append('<div>Darth Vader</div>');
+            $('#enemyFighter').append('<img src="assets/images/darth-vader.png" width=150px height=150px><br>');
+            $('#enemyFighter').append('<div id="darthPower"></div>');
+            $('#darthPower').html(darthPower);
+            attack();
+        
+    }) /* end darth2 (enemy) click */
+
+    $("#kylo2").on("click", function(){
+            yourEnemy='kylo';
+            $('#enemy4').replaceWith('');
+            enemyPower=20;
+            $('#defender').after('<div id ="enemyFighter"></div>');
+            $('#enemyFighter').append('<div>Kylo Ren</div>');
+            $('#enemyFighter').append('<img src="assets/images/kylo-ren.png" width=150px height=150px><br>');
+            $('#enemyFighter').append('<div id="kyloPower"></div>');
+            $('#kyloPower').html(kyloPower);
+            attack();
+    }) /* end obi-wan2 (enemy) click */
+
+
+
+
 } /* end of function yourEnemies() */
+
+/* Begin function attack() */ 
+ function attack() {
+    $('#attackButton').on("click", function(){
+            
+            if (yourFighter == 'luke' && yourEnemy == 'obi-wan'){
+               
+                    lukePower=(lukePower-enemyPower);
+                    obiPower=(obiPower-attackPower);
+                    $('#lukePower').html(lukePower);
+                    $('#obiPower').html(obiPower);
+                    attackPower=attackPower+8;
+
+                    console.log("luke: " + lukePower+" obi: " + obiPower); 
+            } /* end if (yourFighter=='luke') && (yourEnemy=='obi-wan') */
+            else if (yourFighter=='luke' && yourEnemy=='darth'){
+                    lukePower=(lukePower-enemyPower);
+                    darthPower=(darthPower-attackPower);
+                    $('#lukePower').html(lukePower);
+                    $('#darthPower').html(darthPower);
+                    attackPower=attackPower+8;
+
+            } /* end if if (yourFighter=='luke') && (yourEnemy=='darth') */
+            
+            else if (yourFighter=='luke' && yourEnemy=='kylo'){
+
+                    lukePower=(lukePower-enemyPower);
+                    kyloPower=(kyloPower-attackPower);
+                    $('#lukePower').html(lukePower);
+                    $('#kyloPower').html(kyloPower);
+                    attackPower=attackPower+8;
+
+            } /* end if (yourFighter=='luke') && (yourEnemy=='kylo') */
+
+              
+            else if (yourFighter=='obi-wan' && yourEnemy=='luke'){
+
+                    obiPower=(obiPower-enemyPower);
+                    lukePower=(lukePower-attackPower);
+                    $('#obiPower').html(obiPower);
+                    $('#lukePower').html(lukePower);
+                    attackPower=attackPower+12;
+
+            }/* end if (yourFighter=='obi-wan') && (yourEnemy=='luke') */ 
+
+            else if (yourFighter=='obi-wan' && yourEnemy=='darth'){
+
+                    obiPower=(obiPower-enemyPower);
+                    darthPower=(darthPower-attackPower);
+                    $('#obiPower').html(obiPower);
+                    $('#darthPower').html(darthPower);
+                    attackPower=attackPower+12;
+
+            }/* end if (yourFighter=='obi-wan') && (yourEnemy=='darth') */ 
+
+            else if (yourFighter=='obi-wan' && yourEnemy=='kylo'){
+
+                    obiPower=(obiPower-enemyPower);
+                    kyloPower=(kyloPower-attackPower);
+                    $('#obiPower').html(obiPower);
+                    $('#kyloPower').html(kyloPower);
+                    attackPower=attackPower+12;
+
+            }/* end if (yourFighter=='obi-wan') && (yourEnemy=='kylo') */ 
+
+            else if (yourFighter=='darth' && yourEnemy=='luke'){
+                    darthPower=(darthPower-enemyPower);
+                    lukePower=(lukePower-attackPower);
+                    $('#darthPower').html(darthPower);
+                    $('#lukePower').html(lukePower);
+                    attackPower=attackPower+25;
+
+            }/* end if (yourFighter=='darth') && (yourEnemy=='luke') */ 
+
+            else if (yourFighter=='darth' && yourEnemy=='obi-wan'){
+                    darthPower=(darthPower-enemyPower);
+                    obiPower=(obiPower-attackPower);
+                    $('#darthPower').html(darthPower);
+                    $('#obiPower').html(obiPower);
+                    attackPower=attackPower+25;
+
+            }/* end if (yourFighter=='darth') && (yourEnemy=='obi-wan') */ 
+
+            else if (yourFighter=='darth' && yourEnemy=='kylo'){
+
+                    darthPower=(darthPower-enemyPower);
+                    kyloPower=(kyloPower-attackPower);
+                    $('#darthPower').html(darthPower);
+                    $('#kyloPower').html(kyloPower);
+                    attackPower=attackPower+25;
+
+            }/* end if (yourFighter=='darth') && (yourEnemy=='kylo') */ 
+
+            else if (yourFighter=='kylo' && yourEnemy=='luke'){
+
+                    kyloPower=(kyloPower-enemyPower);
+                    lukePower=(lukePower-attackPower);
+                    $('#kyloPower').html(kyloPower);
+                    $('#lukePower').html(lukePower);
+                    attackPower=attackPower+20;
+
+            }/* end if (yourFighter=='kylo') && (yourEnemy=='luke') */ 
+            
+             else if (yourFighter=='kylo' && yourEnemy=='obi-wan'){
+
+                    kyloPower=(kyloPower-enemyPower);
+                    obiPower=(obiPower-attackPower);
+                    $('#kyloPower').html(kyloPower);
+                    $('#obiPower').html(obiPower);
+                    attackPower=attackPower+20;
+
+            }/* end if (yourFighter=='kylo') && (yourEnemy=='obi-wan') */ 
+
+             else if (yourFighter=='kylo' && yourEnemy=='darth'){
+
+                    kyloPower=(kyloPower-enemyPower);
+                    darthPower=(darthPower-attackPower);
+                    $('#kyloPower').html(kyloPower);
+                    $('#darthPower').html(darthPower);
+                    attackPower=attackPower+20;
+
+            }/* end if (yourFighter=='kylo') && (yourEnemy=='darth') */ 
+
+            
+    }) /* end  click attackButton */            
+            
+
+
+
+
+}    /* end function attack() */
 
     
 
