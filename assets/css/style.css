@@ -108,10 +108,15 @@ button	{
 
 
 
-.enemyCharacter 		{
+
+
+#enemy1, #enemy2, #enemy3, #enemy4	{
+	position: relative;
+	float: left;
+	padding-left: 0px;
 	width: 190px;
 	height: 190px;
-	margin-left: 20px;
+	margin-left: 0px;
 	background-color: red;
 	border-style: solid;
 	border-color: red;
