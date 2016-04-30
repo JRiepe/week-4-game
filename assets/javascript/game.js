@@ -93,8 +93,7 @@ function startGame() {
         
     }) /* end kylo click */
 
-
-
+    
 
 
     
@@ -289,13 +288,39 @@ function yourEnemies()  {
                     attackPower=attackPower+8;
                      
             } /* end if (yourFighter=='luke') && (yourEnemy=='obi-wan') */
+
             else if (yourFighter=='luke' && yourEnemy=='darth'){
                     lukePower=(lukePower-enemyPower);
                     darthPower=(darthPower-attackPower);
                     $('#lukePower').html(lukePower);
                     $('#darthPower').html(darthPower);
-                    attackPower=attackPower+8;
+                    $('#attackLine1').html('<p>You suffered '+enemyPower+' damage points</p>');
+                    $('#attackLine2').html('<p>You inflicted '+attackPower+' on Darth Vader');
+                    if (lukePower <= 0 || darthPower <= 0) {
+                        
+                        $('#enemyFighter').replaceWith('');
+                        $('#endGame').html('<button id="resetButton">Reset</button>');
+                        
+                        if (lukePower <=0 && darthPower <= 0){
 
+                            $('#attackLine1').html('<p>You both died valiantly in Battle!</p>');
+                            $('#attackLine2').html('<p>Press the Reset Button to play again!</p>');
+                            yourEnemy="";
+                        }
+                        
+                        if (lukePower <=0) {
+                            $('#attackLine1').html('<p>You died valiantly in Battle!</p>');
+                            $('#attackLine2').html('<p>Press the Reset Button to play again!</p>');
+                            yourEnemy="";
+                        }
+                        
+                        if (darthPower <=0) {
+                            $('#attackLine1').html('<p>You have defeated your opponenet!</p>');
+                            $('#attackLine2').html('<p>Click on another enemy to battle them!</p>');
+                            yourEnemy="";
+                        }
+                    } /* end if (lukePower<=0 || darthPower<=0) */
+                    attackPower=attackPower+8;
             } /* end if if (yourFighter=='luke') && (yourEnemy=='darth') */
             
             else if (yourFighter=='luke' && yourEnemy=='kylo'){
@@ -304,6 +329,32 @@ function yourEnemies()  {
                     kyloPower=(kyloPower-attackPower);
                     $('#lukePower').html(lukePower);
                     $('#kyloPower').html(kyloPower);
+                    $('#attackLine1').html('<p>You suffered '+enemyPower+' damage points</p>');
+                    $('#attackLine2').html('<p>You inflicted '+attackPower+' on Kylo Ren');
+                    if (lukePower <= 0 || kyloPower <= 0) {
+                        
+                        $('#enemyFighter').replaceWith('');
+                        $('#endGame').html('<button id="resetButton">Reset</button>');
+                        
+                        if (lukePower <=0 && kyloPower <= 0){
+
+                            $('#attackLine1').html('<p>You both died valiantly in Battle!</p>');
+                            $('#attackLine2').html('<p>Press the Reset Button to play again!</p>');
+                            yourEnemy="";
+                        }
+                        
+                        if (lukePower <=0) {
+                            $('#attackLine1').html('<p>You died valiantly in Battle!</p>');
+                            $('#attackLine2').html('<p>Press the Reset Button to play again!</p>');
+                            yourEnemy="";
+                        }
+                        
+                        if (obiPower <=0) {
+                            $('#attackLine1').html('<p>You have defeated your opponenet!</p>');
+                            $('#attackLine2').html('<p>Click on another enemy to battle them!</p>');
+                            yourEnemy="";
+                        }
+                    } /* end if (lukePower<=0 || obiPower<=0) */
                     attackPower=attackPower+8;
 
             } /* end if (yourFighter=='luke') && (yourEnemy=='kylo') */
@@ -315,6 +366,33 @@ function yourEnemies()  {
                     lukePower=(lukePower-attackPower);
                     $('#obiPower').html(obiPower);
                     $('#lukePower').html(lukePower);
+                    $('#attackLine1').html('<p>You suffered '+enemyPower+' damage points</p>');
+                    $('#attackLine2').html('<p>You inflicted '+attackPower+' on Luke Skywalker');
+                    if (obiPower <= 0 || lukePower <= 0) {
+                        
+                        $('#enemyFighter').replaceWith('');
+                        $('#endGame').html('<button id="resetButton">Reset</button>');
+                        
+                        if (obiPower <=0 && lukePower <= 0){
+
+                            $('#attackLine1').html('<p>You both died valiantly in Battle!</p>');
+                            $('#attackLine2').html('<p>Press the Reset Button to play again!</p>');
+                            yourEnemy="";
+                        }
+                        
+                        if (obiPower <=0) {
+                            $('#attackLine1').html('<p>You died valiantly in Battle!</p>');
+                            $('#attackLine2').html('<p>Press the Reset Button to play again!</p>');
+                            yourEnemy="";
+                        }
+                        
+                        if (lukePower <=0) {
+                            $('#attackLine1').html('<p>You have defeated your opponenet!</p>');
+                            $('#attackLine2').html('<p>Click on another enemy to battle them!</p>');
+                            yourEnemy="";
+                        }
+                    } /* end if (obiPower<=0 || lukePower<=0) */
+                    
                     attackPower=attackPower+12;
 
             }/* end if (yourFighter=='obi-wan') && (yourEnemy=='luke') */ 
@@ -325,6 +403,33 @@ function yourEnemies()  {
                     darthPower=(darthPower-attackPower);
                     $('#obiPower').html(obiPower);
                     $('#darthPower').html(darthPower);
+                    $('#attackLine1').html('<p>You suffered '+enemyPower+' damage points</p>');
+                    $('#attackLine2').html('<p>You inflicted '+attackPower+' on Darth Vader');
+                    if (obiPower <= 0 || darthPower <= 0) {
+                        
+                        $('#enemyFighter').replaceWith('');
+                        $('#endGame').html('<button id="resetButton">Reset</button>');
+                        
+                        if (obiPower <=0 && darthPower <= 0){
+
+                            $('#attackLine1').html('<p>You both died valiantly in Battle!</p>');
+                            $('#attackLine2').html('<p>Press the Reset Button to play again!</p>');
+                            yourEnemy="";
+                        }
+                        
+                        if (obiPower <=0) {
+                            $('#attackLine1').html('<p>You died valiantly in Battle!</p>');
+                            $('#attackLine2').html('<p>Press the Reset Button to play again!</p>');
+                            yourEnemy="";
+                        }
+                        
+                        if (darthPower <=0) {
+                            $('#attackLine1').html('<p>You have defeated your opponenet!</p>');
+                            $('#attackLine2').html('<p>Click on another enemy to battle them!</p>');
+                            yourEnemy="";
+                        }
+                    } /* end if (lukePower<=0 || obiPower<=0) */
+                    
                     attackPower=attackPower+12;
 
             }/* end if (yourFighter=='obi-wan') && (yourEnemy=='darth') */ 
@@ -335,6 +440,33 @@ function yourEnemies()  {
                     kyloPower=(kyloPower-attackPower);
                     $('#obiPower').html(obiPower);
                     $('#kyloPower').html(kyloPower);
+                    $('#attackLine1').html('<p>You suffered '+enemyPower+' damage points</p>');
+                    $('#attackLine2').html('<p>You inflicted '+attackPower+' on Kylo Ren');
+                    if (obiPower <= 0 || kyloPower <= 0) {
+                        
+                        $('#enemyFighter').replaceWith('');
+                        $('#endGame').html('<button id="resetButton">Reset</button>');
+                        
+                        if (obiPower <=0 && kyloPower <= 0){
+
+                            $('#attackLine1').html('<p>You both died valiantly in Battle!</p>');
+                            $('#attackLine2').html('<p>Press the Reset Button to play again!</p>');
+                            yourEnemy="";
+                        }
+                        
+                        if (obiPower <=0) {
+                            $('#attackLine1').html('<p>You died valiantly in Battle!</p>');
+                            $('#attackLine2').html('<p>Press the Reset Button to play again!</p>');
+                            yourEnemy="";
+                        }
+                        
+                        if (kyloPower <=0) {
+                            $('#attackLine1').html('<p>You have defeated your opponenet!</p>');
+                            $('#attackLine2').html('<p>Click on another enemy to battle them!</p>');
+                            yourEnemy="";
+                        }
+                    } /* end if (obiPower<=0 || kyloPower<=0) */
+                    
                     attackPower=attackPower+12;
 
             }/* end if (yourFighter=='obi-wan') && (yourEnemy=='kylo') */ 
@@ -344,6 +476,33 @@ function yourEnemies()  {
                     lukePower=(lukePower-attackPower);
                     $('#darthPower').html(darthPower);
                     $('#lukePower').html(lukePower);
+                    $('#attackLine1').html('<p>You suffered '+enemyPower+' damage points</p>');
+                    $('#attackLine2').html('<p>You inflicted '+attackPower+' on Luke Skywalker');
+                    if (darthPower <= 0 || lukePower <= 0) {
+                        
+                        $('#enemyFighter').replaceWith('');
+                        $('#endGame').html('<button id="resetButton">Reset</button>');
+                        
+                        if (darthPower <=0 && lukePower <= 0){
+
+                            $('#attackLine1').html('<p>You both died valiantly in Battle!</p>');
+                            $('#attackLine2').html('<p>Press the Reset Button to play again!</p>');
+                            yourEnemy="";
+                        }
+                        
+                        if (darthPower <=0) {
+                            $('#attackLine1').html('<p>You died valiantly in Battle!</p>');
+                            $('#attackLine2').html('<p>Press the Reset Button to play again!</p>');
+                            yourEnemy="";
+                        }
+                        
+                        if (lukePower <=0) {
+                            $('#attackLine1').html('<p>You have defeated your opponenet!</p>');
+                            $('#attackLine2').html('<p>Click on another enemy to battle them!</p>');
+                            yourEnemy="";
+                        }
+                    } /* end if (darthPower<=0 || lukePower<=0) */
+                    
                     attackPower=attackPower+25;
 
             }/* end if (yourFighter=='darth') && (yourEnemy=='luke') */ 
@@ -353,6 +512,33 @@ function yourEnemies()  {
                     obiPower=(obiPower-attackPower);
                     $('#darthPower').html(darthPower);
                     $('#obiPower').html(obiPower);
+                    $('#attackLine1').html('<p>You suffered '+enemyPower+' damage points</p>');
+                    $('#attackLine2').html('<p>You inflicted '+attackPower+' on Obi-Wan Kenobi');
+                    if (darthPower <= 0 || obiPower <= 0) {
+                        
+                        $('#enemyFighter').replaceWith('');
+                        $('#endGame').html('<button id="resetButton">Reset</button>');
+                        
+                        if (darthPower <=0 && obiPower <= 0){
+
+                            $('#attackLine1').html('<p>You both died valiantly in Battle!</p>');
+                            $('#attackLine2').html('<p>Press the Reset Button to play again!</p>');
+                            yourEnemy="";
+                        }
+                        
+                        if (darthPower <=0) {
+                            $('#attackLine1').html('<p>You died valiantly in Battle!</p>');
+                            $('#attackLine2').html('<p>Press the Reset Button to play again!</p>');
+                            yourEnemy="";
+                        }
+                        
+                        if (obiPower <=0) {
+                            $('#attackLine1').html('<p>You have defeated your opponenet!</p>');
+                            $('#attackLine2').html('<p>Click on another enemy to battle them!</p>');
+                            yourEnemy="";
+                        }
+                    } /* end if (darthPower<=0 || obiPower<=0) */
+                    
                     attackPower=attackPower+25;
 
             }/* end if (yourFighter=='darth') && (yourEnemy=='obi-wan') */ 
@@ -363,6 +549,33 @@ function yourEnemies()  {
                     kyloPower=(kyloPower-attackPower);
                     $('#darthPower').html(darthPower);
                     $('#kyloPower').html(kyloPower);
+                    $('#attackLine1').html('<p>You suffered '+enemyPower+' damage points</p>');
+                    $('#attackLine2').html('<p>You inflicted '+attackPower+' on Kylo Ren');
+                    if (darthPower <= 0 || kyloPower <= 0) {
+                        
+                        $('#enemyFighter').replaceWith('');
+                        $('#endGame').html('<button id="resetButton">Reset</button>');
+                        
+                        if (darthPower <=0 && kyloPower <= 0){
+
+                            $('#attackLine1').html('<p>You both died valiantly in Battle!</p>');
+                            $('#attackLine2').html('<p>Press the Reset Button to play again!</p>');
+                            yourEnemy="";
+                        }
+                        
+                        if (darthPower <=0) {
+                            $('#attackLine1').html('<p>You died valiantly in Battle!</p>');
+                            $('#attackLine2').html('<p>Press the Reset Button to play again!</p>');
+                            yourEnemy="";
+                        }
+                        
+                        if (kyloPower <=0) {
+                            $('#attackLine1').html('<p>You have defeated your opponenet!</p>');
+                            $('#attackLine2').html('<p>Click on another enemy to battle them!</p>');
+                            yourEnemy="";
+                        }
+                    } /* end if (darthPower<=0 || kyloPower<=0) */
+                    
                     attackPower=attackPower+25;
 
             }/* end if (yourFighter=='darth') && (yourEnemy=='kylo') */ 
@@ -373,6 +586,33 @@ function yourEnemies()  {
                     lukePower=(lukePower-attackPower);
                     $('#kyloPower').html(kyloPower);
                     $('#lukePower').html(lukePower);
+                    $('#attackLine1').html('<p>You suffered '+enemyPower+' damage points</p>');
+                    $('#attackLine2').html('<p>You inflicted '+attackPower+' on Luke Skywalker');
+                    if (kyloPower <= 0 || lukePower <= 0) {
+                        
+                        $('#enemyFighter').replaceWith('');
+                        $('#endGame').html('<button id="resetButton">Reset</button>');
+                        
+                        if (kyloPower <=0 && lukePower <= 0){
+
+                            $('#attackLine1').html('<p>You both died valiantly in Battle!</p>');
+                            $('#attackLine2').html('<p>Press the Reset Button to play again!</p>');
+                            yourEnemy="";
+                        }
+                        
+                        if (kyloPower <=0) {
+                            $('#attackLine1').html('<p>You died valiantly in Battle!</p>');
+                            $('#attackLine2').html('<p>Press the Reset Button to play again!</p>');
+                            yourEnemy="";
+                        }
+                        
+                        if (lukePower <=0) {
+                            $('#attackLine1').html('<p>You have defeated your opponenet!</p>');
+                            $('#attackLine2').html('<p>Click on another enemy to battle them!</p>');
+                            yourEnemy="";
+                        }
+                    } /* end if (kyloPower<=0 || lukePower<=0) */
+                    
                     attackPower=attackPower+20;
 
             }/* end if (yourFighter=='kylo') && (yourEnemy=='luke') */ 
@@ -383,6 +623,33 @@ function yourEnemies()  {
                     obiPower=(obiPower-attackPower);
                     $('#kyloPower').html(kyloPower);
                     $('#obiPower').html(obiPower);
+                    $('#attackLine1').html('<p>You suffered '+enemyPower+' damage points</p>');
+                    $('#attackLine2').html('<p>You inflicted '+attackPower+' on Obi-Wan Kenobi');
+                    if (kyloPower <= 0 || obiPower <= 0) {
+                        
+                        $('#enemyFighter').replaceWith('');
+                        $('#endGame').html('<button id="resetButton">Reset</button>');
+                        
+                        if (kyloPower <=0 && obiPower <= 0){
+
+                            $('#attackLine1').html('<p>You both died valiantly in Battle!</p>');
+                            $('#attackLine2').html('<p>Press the Reset Button to play again!</p>');
+                            yourEnemy="";
+                        }
+                        
+                        if (kyloPower <=0) {
+                            $('#attackLine1').html('<p>You died valiantly in Battle!</p>');
+                            $('#attackLine2').html('<p>Press the Reset Button to play again!</p>');
+                            yourEnemy="";
+                        }
+                        
+                        if (obiPower <=0) {
+                            $('#attackLine1').html('<p>You have defeated your opponenet!</p>');
+                            $('#attackLine2').html('<p>Click on another enemy to battle them!</p>');
+                            yourEnemy="";
+                        }
+                    } /* end if (kyloPower<=0 || obiPower<=0) */
+                    
                     attackPower=attackPower+20;
 
             }/* end if (yourFighter=='kylo') && (yourEnemy=='obi-wan') */ 
@@ -393,11 +660,45 @@ function yourEnemies()  {
                     darthPower=(darthPower-attackPower);
                     $('#kyloPower').html(kyloPower);
                     $('#darthPower').html(darthPower);
+                    $('#attackLine1').html('<p>You suffered '+enemyPower+' damage points</p>');
+                    $('#attackLine2').html('<p>You inflicted '+attackPower+' on Darth Vader');
+                    if (kyloPower <= 0 || darthPower <= 0) {
+                        
+                        $('#enemyFighter').replaceWith('');
+                        $('#endGame').html('<button id="resetButton">Reset</button>');
+                        
+                        if (kyloPower <=0 && darthPower <= 0){
+
+                            $('#attackLine1').html('<p>You both died valiantly in Battle!</p>');
+                            $('#attackLine2').html('<p>Press the Reset Button to play again!</p>');
+                            yourEnemy="";
+                        }
+                        
+                        if (kyloPower <=0) {
+                            $('#attackLine1').html('<p>You died valiantly in Battle!</p>');
+                            $('#attackLine2').html('<p>Press the Reset Button to play again!</p>');
+                            yourEnemy="";
+                        }
+                        
+                        if (darthPower <=0) {
+                            $('#attackLine1').html('<p>You have defeated your opponenet!</p>');
+                            $('#attackLine2').html('<p>Click on another enemy to battle them!</p>');
+                            yourEnemy="";
+                        }
+                    } /* end if (kyloPower<=0 || darthPower<=0) */
+                    
                     attackPower=attackPower+20;
 
             }/* end if (yourFighter=='kylo') && (yourEnemy=='darth') */ 
 
-            
+            /* reset button */
+
+            $("#resetButton").on("click", function(){
+                    location.reload();
+                    
+                
+            }) /* end reset button click */
+
     }) /* end  click attackButton */            
             
             
