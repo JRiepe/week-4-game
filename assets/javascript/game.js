@@ -16,8 +16,8 @@ function startGame() {
     var yourFighter;
     var yourEnemy='';
     
-    var attackPower;
-    var enemyPower;
+    var attackPower=0;
+    var enemyPower=0;
     
     $('#lukePower').html(lukePower);
     $('#obiPower').html(obiPower);
